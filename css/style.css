@@ -1,0 +1,210 @@
+/* ================================= Colors ================================= */
+
+:root {
+    --pink: #ce2178;
+    --dark-pink: #b5179e;
+    --purple: #7209b7;
+    --dark-purple: #3a0ca3;
+    --dark-dark-purple: #1b0759;
+    --dark-blue: #3f37c9;
+    --blue: #4361ee;
+    --light-blue: #4895ef;
+    --aqua: #50deff;
+}
+
+/* ================================= Global ================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    text-decoration: none;
+    outline: none;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--dark-blue);
+}
+
+/* ================================= NavBar ================================= */
+
+header {
+    padding: 1rem;
+    background-color: var(--dark-purple);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#imgLogo {
+    width: 15rem;
+}
+
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+header .navbar a {
+    padding: 1rem;
+
+
+    font-weight: 700;
+    color: var(--aqua);
+
+    opacity: 0.85;
+}
+
+header .navbar a:hover {
+    background-color: var(--dark-dark-purple);
+
+    opacity: 1;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* ================================= Main ================================= */
+
+main {
+    background-color: var(--dark-blue);
+    padding: 2rem;
+    text-align: center;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+main .card {
+    background-color: var(--dark-purple);
+
+    padding: 1rem 2rem;
+    width: 47.5vw;
+    opacity: 0.8;
+
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 75vh;
+    overflow-y: scroll;
+
+}
+
+main h1 {
+    color: var(--aqua);
+    padding: 1rem;
+}
+
+main .card.night .subcard:first-child{
+    margin-top: 22rem;
+}
+
+main .card.entertainment .subcard:first-child{
+    margin-top: 64rem;
+}
+
+
+main .subcard {
+    background-color: var(--aqua);
+    
+    margin: .25rem 0;
+    
+    width: 100%;
+    min-height: 10rem;
+    
+    border-radius: 1rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .subcard h2{
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 2px 3px var(--dark-dark-purple);
+}
+
+.imgBrahma {
+    background-image: url("/img/blur_bar-brahma.jpg");
+    filter: blur(2px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 10% 70%;
+}
+
+.imgSkye {
+    background: var(--dark-purple) url("/img/blur_skybar.jpg") no-repeat;
+    background-size: cover;
+    background-position: 25% 60%;
+}
+
+.imgVeloso {
+    background: var(--dark-purple) url("/img/blur_veloso-bar.jpg") no-repeat;
+    background-size: cover;
+    background-position: 25% 5%;
+}
+
+.imgDedge {
+    background: var(--dark-purple) url("/img/blur_D-Edge.jpg") no-repeat;
+    background-size: cover;
+    background-position: 25% 60%;
+}
+
+.imgTheWeek {
+    background: var(--dark-purple) url("/img/blur_The-Week.jpg") no-repeat;
+    background-size: cover;
+    background-position: 25% 60%;
+}
+
+.imgVillaCountry {
+    background: var(--dark-purple) url("/img/blur_VillaCountry.jpg") no-repeat;
+    background-size: cover;
+}
+
+/* =================================== Scroll ====================================== */
+
+
+/* ==================================== Footer ===================================== */
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ================================= Media Queries ================================= */
+
+@media only screen and (max-width:750px) {
+
+    #imgLogo {
+        width: 15rem;
+        margin-bottom: 3rem;
+    }
+
+    header {
+        flex-direction: column;
+    }
+}
