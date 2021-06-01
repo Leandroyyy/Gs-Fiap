@@ -1,0 +1,248 @@
+/* ================================= Colors ================================= */
+
+:root {
+    --pink: #ce2178;
+    --dark-pink: #b5179e;
+    --purple: #7209b7;
+    --dark-purple: #3a0ca3;
+    --dark-dark-purple: #1b0759;
+    --dark-blue: #3f37c9;
+    --blue: #4361ee;
+    --light-blue: #4895ef;
+    --aqua: #50deff;
+}
+
+/* ================================= Global ================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    text-decoration: none;
+    outline: none;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--dark-blue);
+}
+
+/* ================================= NavBar ================================= */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+
+    margin-bottom: 2rem;
+
+    padding: 1rem;
+    background-color: var(--dark-purple);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: space-between;
+
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+
+    z-index: 999;
+}
+
+#imgLogo {
+    width: 15rem;
+}
+
+
+header .navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    padding: 1rem;
+
+
+    font-weight: 700;
+    color: var(--aqua);
+
+    opacity: 0.85;
+}
+
+header .navbar a:hover {
+    background-color: var(--dark-dark-purple);
+
+    opacity: 1;
+}
+
+a.active {
+    background-color: var(--dark-dark-purple);
+    color: var(--pink);
+    opacity: 1;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+li {
+    list-style: none;
+}
+
+/* ================================= Main ================================= */
+
+.container {
+    margin: 5rem 0;
+    padding: 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--dark-purple);
+
+    padding: 1rem;
+
+    min-width: 25rem;
+    width: 30vw;
+
+
+    height: max-content;
+    max-height: 268px;
+
+    border-radius: .75rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, .5));
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, .5));
+}
+
+.cardImage {
+    height: 10rem;
+    width: 10rem;
+    border-radius: .5rem;
+
+    object-fit: cover;
+}
+
+
+.content {
+    padding: 1rem;
+}
+
+.content p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /** número de linhas que você quer exibir */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1rem 0;
+}
+
+.title h1 {
+    font-size: 1.5rem;
+}
+
+.title .rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    font-size: 1.35rem;
+}
+
+/* =================================== Scroll ====================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--aqua);
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--light-blue);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-blue);
+    border-radius: 0px;
+}
+
+/* ==================================== Footer ===================================== */
+
+
+footer {
+    background-color: var(--dark-purple);
+
+    width: 100vw;
+    bottom: 0;
+    padding: 1rem;
+    position: fixed;
+
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+
+    font-size: 1.2rem;
+    color: var(--aqua);
+
+
+    text-align: center;
+}
+
+/* ================================= Media Queries ================================= */
+
+@media only screen and (max-width:1280px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card {
+        width: 45vw;
+    }
+}
+
+@media only screen and (max-width:850px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        width: 90vw;
+    }
+}
