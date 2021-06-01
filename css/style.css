@@ -27,6 +27,8 @@
 
 body {
     background-color: var(--dark-blue);
+
+    overflow:hidden;
 }
 
 /* ================================= NavBar ================================= */
@@ -58,7 +60,6 @@ header nav {
 header .navbar a {
     padding: 1rem;
 
-
     font-weight: 700;
     color: var(--aqua);
 
@@ -84,19 +85,23 @@ li {
 
 main {
     background-color: var(--dark-blue);
-    padding: 2rem;
+    padding: 1rem;
     text-align: center;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
 
+.panel{
+    background-color: var(--dark-purple);
+    border-radius:1rem;
 }
 
 main .card {
     background-color: var(--dark-purple);
 
-    padding: 1rem 2rem;
+    padding: 1rem 3rem;
     width: 47.5vw;
     opacity: 0.8;
 
@@ -107,9 +112,28 @@ main .card {
     justify-content: center;
     align-items: center;
 
-    height: 75vh;
+    height: 70vh;
     overflow-y: scroll;
 
+}
+
+.card::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.card::-webkit-scrollbar-thumb {
+    background: var(--aqua);
+    border-radius: 0px;
+}
+
+.card::-webkit-scrollbar-thumb:hover {
+    background: var(--light-blue);
+}
+
+.card::-webkit-scrollbar-track {
+    background: var(--dark-blue);
+    border-radius: 0px;
 }
 
 main h1 {
@@ -122,9 +146,8 @@ main .card.night .subcard:first-child{
 }
 
 main .card.entertainment .subcard:first-child{
-    margin-top: 64rem;
+    margin-top: 56rem;
 }
-
 
 main .subcard {
     background-color: var(--aqua);
@@ -132,7 +155,7 @@ main .subcard {
     margin: .25rem 0;
     
     width: 100%;
-    min-height: 10rem;
+    min-height: 8rem;
     
     border-radius: 1rem;
     
@@ -159,31 +182,31 @@ main .subcard {
 }
 
 .imgSkye {
-    background: var(--dark-purple) url("/img/blur_skybar.jpg") no-repeat;
+    background: url("/img/blur_skybar.jpg") no-repeat;
     background-size: cover;
     background-position: 25% 60%;
 }
 
 .imgVeloso {
-    background: var(--dark-purple) url("/img/blur_veloso-bar.jpg") no-repeat;
+    background: url("/img/blur_veloso-bar.jpg") no-repeat;
     background-size: cover;
     background-position: 25% 5%;
 }
 
 .imgDedge {
-    background: var(--dark-purple) url("/img/blur_D-Edge.jpg") no-repeat;
+    background:url("/img/blur_D-Edge.jpg") no-repeat;
     background-size: cover;
     background-position: 25% 60%;
 }
 
 .imgTheWeek {
-    background: var(--dark-purple) url("/img/blur_The-Week.jpg") no-repeat;
+    background:  url("/img/blur_The-Week.jpg") no-repeat;
     background-size: cover;
     background-position: 25% 60%;
 }
 
 .imgVillaCountry {
-    background: var(--dark-purple) url("/img/blur_VillaCountry.jpg") no-repeat;
+    background: url("/img/blur_VillaCountry.jpg") no-repeat;
     background-size: cover;
 }
 
@@ -194,7 +217,7 @@ main .subcard {
 }
 
 .imgVilaMadalena{
-    background: var(--dark-purple) url("/img/blur_vila-madalena.jpg") no-repeat;
+    background: url("/img/blur_vila-madalena.jpg") no-repeat;
     background-size: cover;
     background-position: 25% 60%;
 }
@@ -249,10 +272,18 @@ main .subcard {
 
 /* ==================================== Footer ===================================== */
 
-footer{
+.rodape{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background-color: var(--dark-purple);
+
+    height:7vh
+}
+
+.rodape small{
+    color:var(--aqua);
 }
 
 /* ================================= Media Queries ================================= */
