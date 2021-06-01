@@ -38,7 +38,6 @@ header {
     background-color: var(--dark-purple);
 
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
 
     align-items: center;
@@ -53,7 +52,6 @@ header {
 
 header nav {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
 }
 
@@ -89,7 +87,6 @@ main {
     text-align: center;
 
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -115,25 +112,6 @@ main .card {
     height: 70vh;
     overflow-y: scroll;
 
-}
-
-.card::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-
-.card::-webkit-scrollbar-thumb {
-    background: var(--aqua);
-    border-radius: 0px;
-}
-
-.card::-webkit-scrollbar-thumb:hover {
-    background: var(--light-blue);
-}
-
-.card::-webkit-scrollbar-track {
-    background: var(--dark-blue);
-    border-radius: 0px;
 }
 
 main h1 {
@@ -269,7 +247,24 @@ main .subcard {
 
 /* =================================== Scroll ====================================== */
 
+.card::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
 
+.card::-webkit-scrollbar-thumb {
+    background: var(--aqua);
+    border-radius: 0px;
+}
+
+.card::-webkit-scrollbar-thumb:hover {
+    background: var(--light-blue);
+}
+
+.card::-webkit-scrollbar-track {
+    background: var(--dark-blue);
+    border-radius: 0px;
+}
 /* ==================================== Footer ===================================== */
 
 .rodape{
@@ -288,14 +283,99 @@ main .subcard {
 
 /* ================================= Media Queries ================================= */
 
-@media only screen and (max-width:750px) {
+@media(min-width: 769px) and (max-width:1279px){
+    .subcard h2{
+        font-size: 1.5rem;
+    }   
+}
 
-    #imgLogo {
-        width: 15rem;
-        margin-bottom: 3rem;
+@media(min-width: 481px) and (max-width:768px){
+    header{
+        padding:1rem;
+        justify-content:center
     }
 
-    header {
+    header a{
+        padding-bottom: 1rem;
+    }
+
+    .navbar a{ 
+        color:#Fff;
+
+        white-space: nowrap;
+    }
+
+    .selected a{
+        color:#fff;
+    }
+
+    .subcard h2{
+        font-size: 1rem;
+    }
+
+    /*========================MAIN=========================*/
+
+    main{
+        padding:0.5rem;
+    }
+
+    main .card{
+        padding:1rem;
+
+        height:65vh;
+
+    }
+
+    main h1{
+        padding:1rem;
+        font-size:1.5rem;
+    }
+
+
+}
+
+@media(max-width:480px){
+    body{
+        overflow: scroll;
+    }
+
+    header{
+        padding:0.5rem;
+        justify-content:center;
+    }
+
+    main{
         flex-direction: column;
     }
+
+    main .card{
+        width:100%;
+    }
+
+    main .subcard{
+        min-height:5rem
+    }
+
+    .panel .night{
+        margin-top: 1rem;
+
+        overflow:hidden
+    }
+
+    .entertainment{
+        margin-top: 1rem;
+    }
+
+    main .card.night .subcard:first-child{
+        margin-top: 1rem;
+    }
+
+    main .card.entertainment .subcard:first-child{
+        margin-top: 20rem;
+    }
+
+    .subcard h2{
+        font-size:1.2rem
+    }
 }
+    
