@@ -305,10 +305,6 @@ main .subcard {
         white-space: nowrap;
     }
 
-    .selected a{
-        color:#fff;
-    }
-
     .subcard h2{
         font-size: 1rem;
     }
@@ -339,9 +335,20 @@ main .subcard {
         overflow: scroll;
     }
 
+    #imgLogo{
+        width:10rem;    
+    }
+
     header{
         padding:0.5rem;
         justify-content:center;
+    }
+
+    header .navbar a{
+        font-size: 0.75rem;
+        padding:0.6rem;
+
+        white-space: nowrap;
     }
 
     main{
@@ -360,6 +367,10 @@ main .subcard {
         margin-top: 1rem;
 
         overflow:hidden
+    }
+
+    .panel h1{
+        font-size:1.5rem;
     }
 
     .entertainment{
