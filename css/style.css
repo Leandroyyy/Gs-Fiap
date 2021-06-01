@@ -141,15 +141,18 @@ main .subcard {
     align-items: center;
 }
 
-main .subcard h2{
+.subcard h2{
     font-size: 2.5rem;
     color: #fff;
     text-shadow: 2px 3px var(--dark-dark-purple);
+}   
+
+.noblur{
+    filter: none;
 }
 
-.imgBrahma {
+.imgBrahma{
     background-image: url("/img/blur_bar-brahma.jpg");
-    filter: blur(2px);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 10% 70%;
@@ -181,6 +184,63 @@ main .subcard h2{
 
 .imgVillaCountry {
     background: var(--dark-purple) url("/img/blur_VillaCountry.jpg") no-repeat;
+    background-size: cover;
+}
+
+.imgTeatro{
+    background-image: url("/img/blur_teatro_Municipal_de_São_Paulo.jpg");
+    background-size: cover;
+    background-position: 10% 70%;
+}
+
+.imgVilaMadalena{
+    background: var(--dark-purple) url("/img/blur_vila-madalena.jpg") no-repeat;
+    background-size: cover;
+    background-position: 25% 60%;
+}
+
+.imgBixiga{
+    background-image: url("/img/blur_bairro_bixiga.jpg");
+    background-size: cover;
+    background-position: 10% 70%;
+}
+
+.imgJockey{
+    background-image: url("/img/blur_jockey_club.png");
+    background-size: cover;
+    background-position: 10% 60%;
+}
+
+.imgPraca{
+    background-image: url("/img/blur_praca-benedito-calixto.png");
+    background-size: cover;
+    background-position: 10% 80%;
+}
+
+.imgInterlagos{
+    background-image: url("/img/blur_autodromo_interlagos.png");
+    background-size: cover;
+    background-position: 10% 60%;
+}
+
+.imgCasapedra{
+    background-image: url("/img/blur_casa-de-pedra.png");
+    background-size: cover;   
+}
+
+.imgEscape{
+    background-image: url("/img/blur_escape.png");
+    background-size: cover;
+    background-position: 10% 50%;
+}
+
+.imgAmericas{
+    background-image: url("/img/blur_americas.png");
+    background-size: cover; 
+}
+
+.imgCinepolis{
+    background-image: url("/img/blur_cinepolisJk.png");
     background-size: cover;
 }
 
