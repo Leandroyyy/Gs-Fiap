@@ -27,6 +27,11 @@ body {
     background-color: var(--purple);
 }
 
+.shadow{
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);;
+}
+
 /* ================================= NavBar ================================= */
 
 header {
@@ -38,10 +43,6 @@ header {
 
     align-items: center;
     justify-content: space-between;
-
-    -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
-
 }
 
 #imgLogo {
@@ -78,12 +79,12 @@ li {
 /* ================================= Main ================================= */
 
 main {
-    padding: 7rem 2rem;
+    padding: 3rem 2rem;
 
-    display:grid;
+    height: 55rem;
 
-    grid-template: "i d" 
-                   "i m";
+    display:flex;
+    flex-direction: row;
 
     gap: 1.5rem;
 }
@@ -98,36 +99,78 @@ main {
 
 /* ================================= Image ================================= */
 
+.divImage{
+    height: 100%;
+}
 
 img.place {
-    width: 40rem;
-    height: 40rem;
+    width: 30rem;
+    height: 30rem;
     object-fit: cover;
+    border-radius: 0 0 1rem 1rem;
+
+
 }
 
-figure{
+figcaption.title{
     text-align: center;
-    font-size: 2.5rem;
     font-weight: 700;
-    grid-area: 'i';
+    font-size: 2.5rem;
+    width:30rem;
 
-}
-
-figcaption{
     color: var(--light-light-gray);
     background-color: var(--dark-purple);
     border-radius: 1rem 1rem 0 0;
-}
 
+}
 
 /* ================================= Descricao ================================= */
 
+
+
 .description{
-    grid-area: 'd';
+    color: var(--light-light-gray);
+    background-color: var(--dark-purple);
+    border-radius: 1rem;
+    
+    width:30rem;
+
+    padding:1rem;
 }
 
-.map{
-    grid-area: 'm';
+.description p{
+    text-indent: 1rem;
+}
+
+
+
+/* ================================= Comentarios ================================= */
+
+.card.rating{
+    margin: 1rem 0;
+}
+
+.comments{
+    padding: 2rem;
+    border: .3rem solid var(--dark-purple);
+    border-radius: 1rem;
+
+    width:100%;
+    
+    overflow-y: scroll;
+
+    height: 100%;
+}
+
+p.name{
+    font-size:1.3rem;
+}
+
+.line{
+    border-bottom: 2px solid var(--light-gray);
+    border-bottom-style: solid;
+    border-bottom-width: 3.1px;
+    width: fit-content;
 }
 
 
@@ -156,22 +199,21 @@ figcaption{
 /* ==================================== Footer ===================================== */
 
 
-footer {
+.rodape{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    
+    width:100%;
+
     background-color: var(--dark-purple);
 
-    width: 100vw;
-    bottom: 0;
-    padding: 1rem;
-    position: fixed;
+    height:9vh;
+}
 
-    -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
-
-    font-size: 1.2rem;
-    color: var(--pink);
-    font-weight: 900;
-
-    text-align: center;
+.rodape small{
+    
+    color:var(--light-light-gray);
 }
 
 /* ================================= Media Queries ================================= */
