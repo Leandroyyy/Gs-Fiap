@@ -150,101 +150,100 @@ main .subcard {
     text-shadow: 2px 3px var(--dark-dark-purple);
 }   
 
-.noblur{
-    filter: none;
-}
 
-.imgBrahma{
-    background-image: url("/img/blur_bar-brahma.jpg");
+/* ============================= IMAGES ============================= */
+
+.imgBrahma {
+    background-image: url("/img/blur/blur_bar-brahma.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 10% 70%;
 }
 
 .imgSkye {
-    background: url("/img/blur_skybar.jpg") no-repeat;
+    background: url("/img/blur/blur_skybar.jpg") no-repeat;
     background-size: cover;
     background-position: 25% 60%;
 }
 
 .imgVeloso {
-    background: url("/img/blur_veloso-bar.jpg") no-repeat;
+    background: url("/img/blur/blur_veloso-bar.jpg") no-repeat;
     background-size: cover;
     background-position: 25% 5%;
 }
 
 .imgDedge {
-    background:url("/img/blur_D-Edge.jpg") no-repeat;
+    background: url("/img/blur/blur_D-Edge.jpg") no-repeat;
     background-size: cover;
     background-position: 25% 60%;
 }
 
 .imgTheWeek {
-    background:  url("/img/blur_The-Week.jpg") no-repeat;
+    background: url("/img/blur/blur_The-Week.jpg") no-repeat;
     background-size: cover;
     background-position: 25% 60%;
 }
 
 .imgVillaCountry {
-    background: url("/img/blur_VillaCountry.jpg") no-repeat;
+    background: url("/img/blur/blur_VillaCountry.jpg") no-repeat;
     background-size: cover;
 }
 
-.imgTeatro{
-    background-image: url("/img/blur_teatro_Municipal_de_São_Paulo.jpg");
+.imgTeatro {
+    background-image: url("/img/blur/blur_teatro_Municipal_de_São_Paulo.jpg");
     background-size: cover;
     background-position: 10% 70%;
 }
 
-.imgVilaMadalena{
-    background: url("/img/blur_vila-madalena.jpg") no-repeat;
+.imgVilaMadalena {
+    background: url("/img/blur/blur_vila-madalena.jpg") no-repeat;
     background-size: cover;
     background-position: 25% 60%;
 }
 
-.imgBixiga{
-    background-image: url("/img/blur_bairro_bixiga.jpg");
+.imgBixiga {
+    background-image: url("/img/blur/blur_bairro_bixiga.jpg");
     background-size: cover;
     background-position: 10% 70%;
 }
 
-.imgJockey{
-    background-image: url("/img/blur_jockey_club.png");
+.imgJockey {
+    background-image: url("/img/blur/blur_jockey_club.png");
     background-size: cover;
     background-position: 10% 60%;
 }
 
-.imgPraca{
-    background-image: url("/img/blur_praca-benedito-calixto.png");
+.imgPraca {
+    background-image: url("/img/blur/blur_praca-benedito-calixto.png");
     background-size: cover;
     background-position: 10% 80%;
 }
 
-.imgInterlagos{
-    background-image: url("/img/blur_autodromo_interlagos.png");
+.imgInterlagos {
+    background-image: url("/img/blur/blur_autodromo_interlagos.png");
     background-size: cover;
     background-position: 10% 60%;
 }
 
-.imgCasapedra{
-    background-image: url("/img/blur_casa-de-pedra.png");
-    background-size: cover;   
+.imgCasapedra {
+    background-image: url("/img/blur/blur_casa-de-pedra.png");
+    background-size: cover;
 }
 
-.imgEscape{
-    background-image: url("/img/blur_escape.png");
+.imgEscape {
+    background-image: url("/img/blur/blur_escape.png");
     background-size: cover;
     background-position: 10% 50%;
 }
 
-.imgAmericas{
-    background-image: url("/img/blur_americas.png");
-    background-size: cover; 
+.imgAmericas {
+    background-image: url("/img/blur/blur_americas.png");
+    background-size: cover;
 }
 
-.imgCinepolis{
-    background-image: url("/img/blur_cinepolisJk.png");
-    background-size: cover;
+.imgCinepolis {
+    background-image: url("/img/blur/blur_cinepolisJk.png");
+    background-size: cover; 
 }
 
 /* =================================== Scroll ====================================== */
@@ -276,7 +275,7 @@ main .subcard {
 
     position: absolute;
     bottom:0;
-    
+   
     width:100%;
 
     background-color: var(--dark-purple);
@@ -286,8 +285,9 @@ main .subcard {
     -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
 }
+
 .rodape small{
-    color:var(--aqua);
+    color:var(--light-light-gray);
 }
 
 /* ================================= Media Queries ================================= */
@@ -328,7 +328,97 @@ main .subcard {
         padding:1rem;
 
         height:65vh;
+    }
 
+    .title a{
+        padding:1rem;
+        font-size:1.5rem;
+    }
+
+    .rodape{
+        height:10vh;
+    }
+
+
+}
+
+@media(min-width: 341px) and (max-width:480px){
+    body{
+        overflow: scroll;
+    }
+
+    #imgLogo{
+        width:10rem;    
+    }
+
+    header{
+        padding:0.5rem;
+        justify-content:center;
+    }
+
+    header .navbar a{
+        font-size: 0.75rem;
+        padding:0.6rem;
+
+        white-space: nowrap
+    }
+
+    main{
+        flex-direction: column;
+    }
+
+    main .card{
+        width:100%;
+    }
+
+    main .subcard{
+        min-height:5rem
+    }
+
+    .panel .night{
+        margin-top: 1rem;
+    }
+
+    .panel h1{
+        font-size:1.5rem;
+    }
+
+    .entertainment{
+        margin-top: 1rem;
+    }
+
+    main .card.night .subcard:first-child{
+        margin-top: 4rem;
+    }
+
+    main .card.entertainment .subcard:first-child{
+        margin-top: 20rem;
+    }
+
+    .subcard h2{
+        font-size:1.2rem
+    }
+}
+
+@media (min-width:245px) and (max-width:340px){
+    body{
+        overflow: scroll
+    }
+
+    #imgLogo{
+        width:10rem;    
+    }
+
+    header{
+        padding:0.5rem;
+        justify-content:center;
+    }
+
+    header .navbar a{
+        font-size: 0.5rem;
+        padding:0.6rem;
+
+        white-space: nowrap
     }
 
     .title a{
@@ -380,8 +470,6 @@ main .subcard {
 
     .panel .night{
         margin-top: 1rem;
-
-        
     }
 
     .panel h1{
@@ -494,6 +582,64 @@ main .subcard {
 
         white-space: nowrap
     }
+    main{
+        flex-direction: column;
+    }
+
+    main .card{
+        width:100%;
+    }
+
+    main .subcard{
+        min-height:5rem
+    }
+
+    .panel .night{
+        margin-top: 1rem;
+
+    }
+
+    .panel h1{
+        font-size:1rem;
+    }
+
+    .entertainment{
+        margin-top: 1rem;
+    }
+
+    main .card.night .subcard:first-child{
+        margin-top: 1rem;
+    }
+
+    main .card.entertainment .subcard:first-child{
+        margin-top: 20rem;
+    }
+
+    .subcard h2{
+        font-size:1.2rem
+    }
+}
+
+@media (max-width:244px){
+    body{
+        overflow: scroll;
+    }
+
+    #imgLogo{
+        width:7rem;    
+    }
+
+    header{
+        padding:0.5rem;
+        justify-content:center;
+    }
+
+    header .navbar a{
+        font-size: 0.4rem;
+        padding:0.6rem;
+
+        white-space: nowrap
+    }
 
     main{
         flex-direction: column;
@@ -501,7 +647,6 @@ main .subcard {
 
     main .card{
         width:100%;
-
         height:35vh;
     }
 
@@ -532,7 +677,6 @@ main .subcard {
     .subcard h2{
         font-size:0.75rem
     }
-
     .rodape{
         position:fixed;
     }
