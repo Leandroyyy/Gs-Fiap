@@ -1,15 +1,12 @@
 /* ================================= Colors ================================= */
-
 :root {
     --pink: #ce2178;
-    --dark-pink: #b5179e;
-    --purple: #7209b7;
-    --dark-purple: #3a0ca3;
-    --dark-dark-purple: #1b0759;
-    --dark-blue: #3f37c9;
-    --blue: #4361ee;
+    --purple: #9155F2;
+    --dark-purple: #2E0670;
     --light-blue: #4895ef;
     --aqua: #50deff;
+    --light-gray: #acacac;
+    --light-light-gray: #cecece;
 }
 
 /* ================================= Global ================================= */
@@ -26,7 +23,7 @@
 }
 
 body {
-    background-color: var(--dark-blue);
+    background-color: var(--purple);
 
     overflow:hidden;
 }
@@ -42,6 +39,9 @@ header {
 
     align-items: center;
     justify-content: space-between;
+
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
 
 }
 
@@ -59,14 +59,12 @@ header .navbar a {
     padding: 1rem;
 
     font-weight: 700;
-    color: var(--aqua);
+    color: var(--light-light-gray);
 
     opacity: 0.85;
 }
 
 header .navbar a:hover {
-    background-color: var(--dark-dark-purple);
-
     opacity: 1;
 }
 
@@ -78,11 +76,9 @@ li {
     list-style: none;
 }
 
-
 /* ================================= Main ================================= */
 
 main {
-    background-color: var(--dark-blue);
     padding: 1rem;
     text-align: center;
 
@@ -93,6 +89,10 @@ main {
 .panel{
     background-color: var(--dark-purple);
     border-radius:1rem;
+
+    -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+
 }
 
 main .card {
@@ -114,10 +114,12 @@ main .card {
 
 }
 
-main h1 {
-    color: var(--aqua);
+.title a{
+    color: var(--light-light-gray);
     padding: 1rem;
 }
+
+
 
 main .card.night .subcard:first-child{
     margin-top: 22rem;
@@ -269,14 +271,21 @@ main .subcard {
 
 .rodape{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content:center;
+
+    position: absolute;
+    bottom:0;
+    
+    width:100%;
 
     background-color: var(--dark-purple);
 
-    height:7vh
-}
+    height:9vh;
 
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+}
 .rodape small{
     color:var(--aqua);
 }
@@ -286,7 +295,7 @@ main .subcard {
 @media(min-width: 769px) and (max-width:1279px){
     .subcard h2{
         font-size: 1.5rem;
-    }   
+    }  
 }
 
 @media(min-width: 481px) and (max-width:768px){
@@ -322,9 +331,13 @@ main .subcard {
 
     }
 
-    main h1{
+    .title a{
         padding:1rem;
         font-size:1.5rem;
+    }
+
+    .rodape{
+        height:10vh;
     }
 
 
@@ -357,6 +370,8 @@ main .subcard {
 
     main .card{
         width:100%;
+
+        height:34vh;
     }
 
     main .subcard{
@@ -387,6 +402,10 @@ main .subcard {
 
     .subcard h2{
         font-size:1.2rem
+    }   
+
+    .rodape{
+        position: fixed;
     }
 }
 
@@ -417,6 +436,8 @@ main .subcard {
 
     main .card{
         width:100%;
+
+        height:35vh
     }
 
     main .subcard{
@@ -447,6 +468,10 @@ main .subcard {
     .subcard h2{
         font-size:1.2rem
     }
+
+    .rodape{
+        position:fixed;
+    }
 }
 
 @media (max-width:244px){
@@ -476,6 +501,8 @@ main .subcard {
 
     main .card{
         width:100%;
+
+        height:35vh;
     }
 
     main .subcard{
@@ -484,8 +511,6 @@ main .subcard {
 
     .panel .night{
         margin-top: 1rem;
-
-
     }
 
     .panel h1{
@@ -506,6 +531,10 @@ main .subcard {
 
     .subcard h2{
         font-size:0.75rem
+    }
+
+    .rodape{
+        position:fixed;
     }
 }
     
