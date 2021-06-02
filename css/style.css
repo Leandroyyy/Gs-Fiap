@@ -270,8 +270,9 @@ main .subcard {
 /* ==================================== Footer ===================================== */
 
 .rodape{
-    position: absolute;
-    bottom:0;
+    display: flex;
+    align-items: center;
+    justify-content:center;
     width:100%;
 
     background-color: var(--dark-purple);
@@ -324,7 +325,7 @@ main .subcard {
 
     }
 
-    main h1{
+    .title a{
         padding:1rem;
         font-size:1.5rem;
     }
