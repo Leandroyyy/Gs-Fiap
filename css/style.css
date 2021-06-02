@@ -55,7 +55,7 @@ header nav {
     flex-wrap: wrap;
 }
 
-header .navbar a {
+.navbar a {
     padding: 1rem;
 
 
@@ -68,6 +68,12 @@ header .navbar a {
 header .navbar a:hover {
     background-color: var(--dark-dark-purple);
 
+    opacity: 1;
+}
+
+a.active{
+    background-color: var(--dark-dark-purple);
+    color: var(--pink);
     opacity: 1;
 }
 
@@ -125,7 +131,6 @@ main .card.entertainment .subcard:first-child{
     margin-top: 64rem;
 }
 
-
 main .subcard {
     background-color: var(--aqua);
     
@@ -156,31 +161,31 @@ main .subcard h2{
 }
 
 .imgSkye {
-    background: var(--dark-purple) url("/img/blur_skybar.jpg") no-repeat;
+    background: var(--dark-purple) url("/img/blur/blur_skybar.jpg") no-repeat;
     background-size: cover;
     background-position: 25% 60%;
 }
 
 .imgVeloso {
-    background: var(--dark-purple) url("/img/blur_veloso-bar.jpg") no-repeat;
+    background: var(--dark-purple) url("/img/blur/blur_veloso-bar.jpg") no-repeat;
     background-size: cover;
     background-position: 25% 5%;
 }
 
 .imgDedge {
-    background: var(--dark-purple) url("/img/blur_D-Edge.jpg") no-repeat;
+    background: var(--dark-purple) url("/img/blur/blur_D-Edge.jpg") no-repeat;
     background-size: cover;
     background-position: 25% 60%;
 }
 
 .imgTheWeek {
-    background: var(--dark-purple) url("/img/blur_The-Week.jpg") no-repeat;
+    background: var(--dark-purple) url("/img/blur/blur_The-Week.jpg") no-repeat;
     background-size: cover;
     background-position: 25% 60%;
 }
 
 .imgVillaCountry {
-    background: var(--dark-purple) url("/img/blur_VillaCountry.jpg") no-repeat;
+    background: var(--dark-purple) url("/img/blur/blur_VillaCountry.jpg") no-repeat;
     background-size: cover;
 }
 

@@ -1,0 +1,196 @@
+/* ================================= Colors ================================= */
+
+:root {
+    --pink: #ce2178;
+    --purple: #9155F2;
+    --dark-purple: #2E0670;
+    --light-blue: #4895ef;
+    --aqua: #50deff;
+    --light-gray: #acacac;
+    --light-light-gray: #cecece;
+}
+
+/* ================================= Global ================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    text-decoration: none;
+    outline: none;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--purple);
+}
+
+/* ================================= NavBar ================================= */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+
+    margin-bottom: 2rem;
+
+    padding: 1rem;
+    background-color: var(--dark-purple);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: space-between;
+
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+
+    z-index: 999;
+}
+
+#imgLogo {
+    width: 15rem;
+}
+
+
+header .navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    padding: 1rem;
+
+
+    font-weight: 700;
+    color: var(--light-light-gray);
+
+    opacity: 0.85;
+}
+
+header .navbar a:hover {
+    background-color: var(--dark-purple);
+
+    opacity: 1;
+}
+
+a.active {
+    background-color: var(--dark-purple);
+    color: var(--pink);
+    opacity: 1;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* ================================= Main ================================= */
+
+main {
+    padding: 7rem 2rem;
+
+    display:grid;
+
+    grid-template: "i d" 
+                   "i m";
+
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--dark-purple);
+    border-radius: 1rem;
+    padding: 1rem;
+    color: var(--light-light-gray)
+}
+
+
+/* ================================= Image ================================= */
+
+
+img.place {
+    width: 40rem;
+    height: 40rem;
+    object-fit: cover;
+}
+
+figure{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    grid-area: 'i';
+
+}
+
+figcaption{
+    color: var(--light-light-gray);
+    background-color: var(--dark-purple);
+    border-radius: 1rem 1rem 0 0;
+}
+
+
+/* ================================= Descricao ================================= */
+
+.description{
+    grid-area: 'd';
+}
+
+.map{
+    grid-area: 'm';
+}
+
+
+
+/* =================================== Scroll ====================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--aqua);
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--light-blue);
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--purple);
+    border-radius: 0px;
+}
+
+/* ==================================== Footer ===================================== */
+
+
+footer {
+    background-color: var(--dark-purple);
+
+    width: 100vw;
+    bottom: 0;
+    padding: 1rem;
+    position: fixed;
+
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+
+    font-size: 1.2rem;
+    color: var(--pink);
+    font-weight: 900;
+
+    text-align: center;
+}
+
+/* ================================= Media Queries ================================= */
