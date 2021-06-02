@@ -114,10 +114,12 @@ main .card {
 
 }
 
-main h1 {
+.title a{
     color: var(--aqua);
     padding: 1rem;
 }
+
+
 
 main .card.night .subcard:first-child{
     margin-top: 22rem;
@@ -268,9 +270,9 @@ main .subcard {
 /* ==================================== Footer ===================================== */
 
 .rodape{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    bottom:0;
+    width:100%;
 
     background-color: var(--dark-purple);
 
