@@ -172,24 +172,6 @@ li {
 
 /* =================================== Scroll ====================================== */
 
-::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--aqua);
-    border-radius: 0px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--light-blue);
-}
-
-::-webkit-scrollbar-track {
-    background-color: var(--purple);
-    border-radius: 0px;
-}
 
 /* ==================================== Footer ===================================== */
 
@@ -222,6 +204,52 @@ li {
 
     .card {
         width: 45vw;
+    }
+
+    .subcard h2{
+        font-size: 1.5rem;
+    }  
+}
+
+@media(min-width: 481px) and (max-width:768px){
+    header{
+        padding:1rem;
+        justify-content:center
+    }
+
+    header a{
+        padding-bottom: 1rem;
+    }
+
+    .navbar a{ 
+        color:#Fff;
+
+        white-space: nowrap;
+    }
+
+    .subcard h2{
+        font-size: 1rem;
+    }
+
+    /*========================MAIN=========================*/
+
+    main{
+        padding:0.5rem;
+    }
+
+    main .card{
+        padding:1rem;
+
+        height:65vh;
+    }
+
+    .title a{
+        padding:1rem;
+        font-size:1.5rem;
+    }
+
+    .rodape{
+        height:10vh;
     }
 }
 
