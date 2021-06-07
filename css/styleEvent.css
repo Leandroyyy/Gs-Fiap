@@ -96,7 +96,7 @@ li {
 
     padding: 1rem;
 
-    min-width: 25rem;
+    min-width: 20rem;
     width: 30vw;
 
 
@@ -164,14 +164,10 @@ li {
 
 .title .rating {
     display: flex;
-    flex-direction: row;
     align-items: center;
 
     font-size: 1.35rem;
 }
-
-/* =================================== Scroll ====================================== */
-
 
 /* ==================================== Footer ===================================== */
 
@@ -179,6 +175,9 @@ li {
     display: flex;
     align-items: center;
     justify-content:center;
+
+    bottom:0;
+    position:absolute;
     
     width:100%;
 
@@ -208,7 +207,11 @@ li {
 
     .subcard h2{
         font-size: 1.5rem;
-    }  
+    } 
+    
+    .rodape{
+        position:fixed;
+    }
 }
 
 @media(min-width: 481px) and (max-width:768px){
@@ -221,44 +224,98 @@ li {
         padding-bottom: 1rem;
     }
 
-    .navbar a{ 
-        color:#Fff;
-
-        white-space: nowrap;
-    }
-
-    .subcard h2{
-        font-size: 1rem;
-    }
-
     /*========================MAIN=========================*/
-
-    main{
-        padding:0.5rem;
-    }
-
-    main .card{
-        padding:1rem;
-
-        height:65vh;
-    }
-
-    .title a{
-        padding:1rem;
-        font-size:1.5rem;
-    }
-
-    .rodape{
-        height:10vh;
-    }
-}
-
-@media only screen and (max-width:850px) {
     .container {
         grid-template-columns: 1fr;
     }
 
     .card {
         width: 90vw;
+    }  
+
+    .rodape{
+        height:5vh;
+    }
+}
+
+@media(min-width: 341px) and (max-width:480px){
+    body{
+        overflow: scroll;
+    }
+
+    #imgLogo{
+        width:10rem;    
+    }
+
+    header{
+        padding:0.5rem;
+        justify-content:center;
+    }
+
+    header .navbar a{
+        font-size: 0.75rem;
+        padding:0.6rem;
+
+        white-space: nowrap
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .cardImage{
+        width: 7rem;
+    }
+
+    .rodape{
+        height:5vh;
+    }
+    
+}
+
+@media (max-width:340px){
+    body{
+        overflow: scroll
+    }
+
+    #imgLogo{
+        width:10rem;    
+    }
+
+    header{
+        padding:0.5rem;
+        justify-content:center;
+    }
+
+    header .navbar a{
+        font-size: 0.5rem;
+        padding:0.6rem;
+
+        white-space: nowrap
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        min-width: 15rem;
+    }
+
+    .cardImage{
+        height:7rem;
+        width:5rem;
+    }
+
+    .title h1{
+        font-size: 1rem;
+    }
+
+    .rating{
+        font-size:1rem;
+    }
+
+    .rodape{
+        height:5vh;
     }
 }
