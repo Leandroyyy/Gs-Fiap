@@ -224,6 +224,10 @@ li {
         padding-bottom: 1rem;
     }
 
+    .navbar a{
+        white-space: nowrap;
+    }
+
     /*========================MAIN=========================*/
     .container {
         grid-template-columns: 1fr;
