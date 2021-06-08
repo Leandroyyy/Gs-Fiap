@@ -1,0 +1,356 @@
+/* ================================= Colors ================================= */
+:root {
+    --pink: #ce2178;
+    --purple: #9155F2;
+    --dark-purple: #2E0670;
+    --light-blue: #4895ef;
+    --aqua: #50deff;
+    --light-gray: #acacac;
+    --light-light-gray: #cecece;
+    --dark-gray: #353535;
+    --shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+}
+
+/* ================================= Global ================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    text-decoration: none;
+    outline: none;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--purple);
+
+    overflow:auto;
+}
+
+/* =================================== Scroll ====================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--aqua);
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--light-blue);
+}
+
+/* ================================= NavBar ================================= */
+
+header {
+    padding: 1rem;
+    background-color: var(--dark-purple);
+
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: space-between;
+
+    -webkit-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+
+}
+
+#imgLogo {
+    width: 15rem;
+}
+
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header .navbar a {
+    padding: 1rem;
+
+    font-weight: 700;
+    color: var(--light-light-gray);
+
+    opacity: 0.85;
+}
+
+header .navbar a:hover {
+    opacity: 1;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* ==================================== Main ===================================== */
+
+main{
+    padding: 3rem;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .card{
+    background-color: #2f0670;
+    padding: 2.5rem;
+    border-radius: 1rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    color: var(--light-light-gray);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+
+.clsButtons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clsLogin{
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==================================== Inputs & Buttons ===================================== */
+
+input{
+    background-color: var(--light-light-gray);
+    text-indent: 1rem;
+
+    font-size: 1rem;
+
+    text-align: center;
+
+    padding: .8rem 1.2rem;
+    width: 50vw;
+    height: 6vh;
+
+    margin-top: 2vh;
+
+    border: .2rem solid var(--light-gray);
+    border-radius: 1.8rem;
+
+    transition-duration: 0.4s;
+
+    opacity: 1rem;
+}
+
+input::placeholder{
+    color: var(--dark-gray);
+}
+
+input:focus{
+    border-color: var(--purple);
+}
+
+/* Select Tag ====================== */
+#types {
+    width: 50vw;
+    margin-top: 2vh;
+    height: 5vh;
+
+    font-family: 'Montserrat';
+    font-size: 1.2rem;
+    padding: .6rem 1rem;
+
+    border: .2rem solid var(--blue);
+    border-radius: 1.8rem;
+    background-color: var(--light-gray);
+    text-indent: .8rem;
+}
+
+select {
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
+}
+
+/* For IE10 */
+select::-ms-expand {
+    display: none;
+}
+
+.btn{
+    align-self: center;
+
+    font-size: 1rem;
+
+    text-align: center;
+
+    padding: .5rem;
+    width: 35vw;
+    height: 6vh;
+
+    border: .2rem solid var(--light-gray);
+    border-radius: 1.8rem;
+
+    background-color: var(--dark-purple);
+    color: var(--light-gray);
+
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+    opacity: 0.8rem
+}
+
+.btn:focus {
+    outline-width: 0;
+    background-color: var(--purple);
+    opacity: 1;
+}
+
+.btn:active{
+    transform: translateY(2px);
+}
+
+.btn:hover{
+    background-color: var(--purple);
+}
+
+.clsButtons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:flex-start;
+    justify-content: space-between;
+}
+
+.loginAndForgot{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a.forgot{
+    margin-top: 0.5rem;
+
+    color: var(--light-gray);
+    font-weight: 700;
+}
+
+a.forgot:hover, a.forgot:focus{
+    color: var(--light-light-gray);
+}
+
+/* ========================= Radio ====================== */
+
+.space {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.choose input[type=radio]+label {
+    padding: .8rem 1.2rem;
+    width: 50vw;
+    height: 6vh;
+
+    text-align: center;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+input[type=radio]+label {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .7rem 1.2rem;
+
+    font-family: 'Montserrat';
+    font-size: 1.2rem;
+
+    background-color: #cecece;
+
+    border-radius: 2rem;
+
+    transition: 0.5s;
+
+}
+
+input[type=radio]:hover+label {
+    background-color: var(--purple);
+    cursor: pointer;
+}
+
+input[type=radio] + label:focus {
+    background-color: var(--purple);
+}
+
+input[type=radio]:checked+label {
+    background-image: none;
+    background-color: var(--purple);
+
+    border-color: #cecece;
+    color: #cecece;
+    font-weight: 600;
+}
+
+.radio input[type=radio],
+.radio label {
+    text-align: center;
+
+    width: 15vw;
+    height: 6vh;
+}
+
+.time input,
+.time label {
+    font-size: 2rem;
+
+    text-align: center;
+
+    width: 50vw;
+    height: 6vh;
+}
+
+/* ==================================== Footer ===================================== */
+
+.rodape{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+
+    position: absolute;
+    bottom:0;
+   
+    width:100%;
+
+    background-color: var(--dark-purple);
+
+    height:9vh;
+
+    -webkit-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+}
+
+.rodape small{
+    color:var(--light-light-gray);
+}
