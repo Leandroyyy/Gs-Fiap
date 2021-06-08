@@ -130,8 +130,6 @@ main .card.entertainment .subcard:first-child{
 }
 
 main .subcard {
-    background-color: var(--aqua);
-    
     margin: .25rem 0;
     
     width: 100%;
