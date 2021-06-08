@@ -147,7 +147,7 @@ main .subcard {
 .subcard h2{
     font-size: 2.5rem;
     color: #fff;
-    text-shadow: 2px 3px var(--dark-dark-purple);
+    text-shadow: 2px 3px var(--dark-purple);
 }   
 
 
