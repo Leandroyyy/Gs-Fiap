@@ -168,6 +168,21 @@ li {
 
     font-size: 1.35rem;
 }
+/*================================Sroll================================ */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--aqua);
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--light-blue);
+}
 
 /* ==================================== Footer ===================================== */
 
@@ -193,6 +208,129 @@ li {
     
     color:var(--light-light-gray);
 }
+
+
+/*==================================Modal================================*/
+
+.modalPlaces{
+    width: 100vw;
+    height:100vh;
+
+    position:fixed;
+    top:0;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    display: flex;
+    justify-content:center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    z-index: 999;
+}
+
+.modalPlaces.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background-color: var(--purple);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 80vw;
+    height:100vh;
+    position: relative;
+    
+    display:flex;
+}
+
+.divImage{
+    padding:0 10rem 0 0;
+}
+
+.card {
+    background-color: var(--dark-purple);
+    border-radius: 1rem;
+    padding: 1rem;
+    color: var(--light-light-gray)
+}
+
+.place {
+    width: 30rem;
+    height: 30rem;
+    object-fit: cover;
+    border-radius: 0 0 1rem 1rem;
+
+
+}
+
+figcaption.title{
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.5rem;
+    width:30rem;
+
+    color: var(--light-light-gray);
+    background-color: var(--dark-purple);
+    border-radius: 1rem 1rem 0 0;
+
+}
+
+.description{
+    color: var(--light-light-gray);
+    background-color: var(--dark-purple);
+    border-radius: 1rem;
+    
+    width:30rem;
+    height: 10rem;
+
+    padding:1rem;
+}
+
+.description p{
+    text-indent: 1rem;
+}
+
+.card.rating{
+    margin: 1rem 0;
+}
+
+.close{
+    top: 1rem;
+    right: 1rem;
+    position:absolute
+}
+
+.close i{
+    cursor: pointer;
+}
+
+.comments{
+
+    margin-top:3rem;
+    padding: 2rem;
+    border: .3rem solid var(--dark-purple);
+    border-radius: 1rem;
+
+    width:100%;
+    height:50%;
+    
+    overflow-y: scroll;
+}
+
+.name{
+    font-size:1.3rem;
+}
+
+.line{
+    border-bottom: 2px solid var(--light-gray);
+    border-bottom-style: solid;
+    border-bottom-width: 3.1px;
+    width: fit-content;
+}
+
 
 /* ================================= Media Queries ================================= */
 

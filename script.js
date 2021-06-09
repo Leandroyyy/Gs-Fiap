@@ -14,18 +14,16 @@ const descriptions = [{
     id:3,
     title:"Veloso",
     description: "DEPOIS AQUI NO VELOSO",
-    img: ""
+    img: "veloso-bar"
 }]
 
 // alteração dos dados
 const DOM = {
 
     dados(index){
-
         let colocarDados = document.querySelector('.divImage')
 
         colocarDados.innerHTML = this.dadosInnerHtml(index)
-
     },
 
     dadosInnerHtml(description){
@@ -43,6 +41,18 @@ const DOM = {
 
 }
 
-DOM.dados(descriptions[1])
+// Abre paginas de acordo com seus dados
+const ModalPages ={
+    open(num){
+        document.querySelector('.modalPlaces')
+            .classList
+            .add('active')
 
+        DOM.dados(descriptions[num])
+    },
 
+    close(){
+        document.querySelector('.modalPlaces')
+            .classList.remove('active')
+    }
+}
