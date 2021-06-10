@@ -74,6 +74,11 @@ header .navbar a:hover {
 li {
     list-style: none;
 }
+
+header .navbar a.active{
+    color:var(--pink);
+    opacity: 1;
+}
 /* ================================= Main ================================= */
 
 .container {
