@@ -331,6 +331,15 @@ figcaption.title{
     width: fit-content;
 }
 
+.map{
+    width:100%;
+    height:40vh;
+
+    padding:1rem;
+
+    border:none;
+
+}
 
 /* ================================= Media Queries ================================= */
 
