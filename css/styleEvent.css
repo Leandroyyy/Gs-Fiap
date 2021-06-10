@@ -247,7 +247,9 @@ li {
 }
 
 .divImage{
-    padding:0 10rem 0 0;
+    margin-top:8rem;
+
+    padding:0 5rem 0 1rem;
 }
 
 .card {
@@ -262,8 +264,6 @@ li {
     height: 30rem;
     object-fit: cover;
     border-radius: 0 0 1rem 1rem;
-
-
 }
 
 figcaption.title{
@@ -290,28 +290,42 @@ figcaption.title{
 }
 
 .description p{
-    text-indent: 1rem;
+    padding-top:1rem;
+}
+
+.description p:first-child{
+    padding:0
 }
 
 .card.rating{
     margin: 1rem 0;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .close{
     top: 1rem;
     right: 1rem;
-    position:absolute
+    position:absolute;
+
 }
 
 .close i{
+    font-size:2rem;
+
     cursor: pointer;
+
+    padding-left:2rem 
 }
+
+/* ================================= Comentarios ================================= */
 
 .comments{
 
     margin-top:3rem;
-    padding: 2rem;
-    border: .3rem solid var(--dark-purple);
+    padding: 1rem;
+    border: 0.3rem solid var(--dark-purple);
     border-radius: 1rem;
 
     width:100%;
@@ -338,8 +352,8 @@ figcaption.title{
     padding:1rem;
 
     border:none;
-
 }
+
 
 /* ================================= Media Queries ================================= */
 
@@ -359,9 +373,40 @@ figcaption.title{
     .rodape{
         position:fixed;
     }
+
+    .modal{
+        overflow: scroll;
+
+        flex-direction: column;
+        align-items: center;
+
+        width:60vw;
+    }
+
+    .divImage{
+        margin-top:2rem;
+        padding:0
+    }
 }
 
-@media(min-width: 481px) and (max-width:768px){
+@media (max-width:900px){
+    figcaption.title{
+        width:25rem
+    }
+
+    .place{
+        width:25rem;
+    }
+
+    .description{
+        width:25rem;
+
+        overflow: scroll
+    }
+}
+
+
+@media (max-width:800px){
     header{
         padding:1rem;
         justify-content:center
@@ -384,47 +429,92 @@ figcaption.title{
         width: 90vw;
     }  
 
-    .rodape{
-        height:5vh;
-    }
-}
-
-@media(min-width: 341px) and (max-width:480px){
-    body{
-        overflow: scroll;
+    .comments{
+        width:50vw;
     }
 
-    #imgLogo{
-        width:10rem;    
+    .card.rating{
+        width:10vw;
+        overflow:scroll;
+
     }
 
-    header{
-        padding:0.5rem;
-        justify-content:center;
+    /*===================Modal==================*/
+
+    figcaption.title{
+        width:20rem
     }
 
-    header .navbar a{
-        font-size: 0.75rem;
-        padding:0.6rem;
-
-        white-space: nowrap
+    .place{
+        width:20rem
     }
 
-    .container {
-        grid-template-columns: 1fr;
-    }
-
-    .cardImage{
-        width: 7rem;
+    .description{
+        width:20rem
     }
 
     .rodape{
         height:5vh;
     }
-    
 }
 
-@media (max-width:340px){
+
+@media (max-width:650px){
+    figcaption.title{
+        width:15rem;
+
+        font-size:1.5rem
+    }
+
+    .place{
+        width:15rem;
+        height:15rem;
+    }
+
+    .description{
+        width:15rem
+    }
+
+    .comments{
+        width:50vw;
+        height:30vh;
+
+        padding:2rem
+    }
+
+    .card.rating{
+        width:5vw;
+        height:10vh;
+    }
+
+    .name{
+        font-size:1rem
+    }
+
+    .text{
+        font-size:1rem;
+    }
+
+}
+
+@media(max-width:500px){
+    figcaption.title{
+        width:10rem;
+
+        font-size:1.5rem
+    }
+
+    .place{
+        width:10rem
+    }
+
+    .description{
+        width:10rem
+    }
+}
+
+
+@media (max-width:480px){
     body{
         overflow: scroll
     }
@@ -460,6 +550,10 @@ figcaption.title{
 
     .title h1{
         font-size: 1rem;
+    }
+
+    .card.rating{
+        overflow: scroll
     }
 
     .rating{

@@ -2,7 +2,9 @@
 // Dados dos lugares
 const descriptions = [{
     title:"Bar Brahma",
-    description: "AGORA NO BAR BRAHMA",
+    description: "Um dos favoritos dos intelectuais, músicos e políticos nas décadas de 50 e 60, com cerveja, lanches e música.",
+    address:"Av. São João, 677 - Centro Histórico de São Paulo, São Paulo - SP, 01036-000",
+    take:"Refeição no local · Retirada na porta · Entrega sem contato",
     img: "brahma-bar",
     alt:"Imagem do Bar Brahma",
     maps:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29261.81096202139!2d-46.658155860449206!3d-23.542342099999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4a734b8f69c1%3A0x11889938a758d631!2sBar%20Brahma!5e0!3m2!1sen!2sbr!4v1623284906478!5m2!1sen!2sbr"
@@ -36,6 +38,8 @@ const descriptions = [{
     img: "villacountry",
     alt:"Imagem da Villa Country",
     maps:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.1264997749395!2d-46.672488185022864!3d-23.527952184699526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5802fdab9fd7%3A0x8f19e039ceb9e889!2sVilla%20Country!5e0!3m2!1sen!2sbr!4v1623331625130!5m2!1sen!2sbr"
+},{
+    
 }]
 
 // alteração dos dados
@@ -50,11 +54,13 @@ const DOM = {
     dadosInnerHtml(description){
         
         const html = ` <figure>
-            <figcaption class="title shad"> ${description.title} </figcaption>
+            <figcaption class="title shadow"> ${description.title} </figcaption>
             <img class="place shadow" src="./img/${description.img}.jpg" alt="${description.alt}">
         </figure>
         <div class="description shadow" >
-            <p>${description.description} </p>
+            <p>${description.description}</p>
+            <p>${description.address}</p>
+            <p>${description.take}</p>
         </div>
         `
         return html;
@@ -69,7 +75,7 @@ const DOM = {
 
     mapaInnerHtml(description){
         const html = 
-        `<iframe class="map" src="${description.maps}" width="600" height="450" allowfullscreen="" loading="lazy"></iframe>`
+        `<iframe class="map" src="${description.maps}" allowfullscreen="" loading="lazy"></iframe>`
 
         return html;
     }
@@ -92,5 +98,3 @@ const ModalPages ={
             .classList.remove('active')
     }
 }
-
-console.log(document.querySelector('.divMap').innerHTML)
