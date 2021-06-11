@@ -4,13 +4,17 @@ const descriptions = [{
     title:"Bar Brahma",
     description: "Um dos favoritos dos intelectuais, músicos e políticos nas décadas de 50 e 60, com cerveja, lanches e música.",
     address:"Av. São João, 677 - Centro Histórico de São Paulo, São Paulo - SP, 01036-000",
-    take:"Refeição no local · Retirada na porta · Entrega sem contato",
+    precoMedio:"R$ 90,00",
+    horario:"TODOS OS DIAS 11:00 - 21:00",
+    melhorDia:"Sábados e Domingos",
+    maiorProcura:"18:00 - 20:00",
     img: "brahma-bar",
     alt:"Imagem do Bar Brahma",
     maps:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29261.81096202139!2d-46.658155860449206!3d-23.542342099999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4a734b8f69c1%3A0x11889938a758d631!2sBar%20Brahma!5e0!3m2!1sen!2sbr!4v1623284906478!5m2!1sen!2sbr"
 },{
     title:"Skye Bar",
     description: "TESTANDO TUDO AQUI NO SKYE",
+    address:"Av. Brigadeiro Luís Antônio, 4700 - Jardim Paulista, São Paulo - SP, 01402-002",
     img: "skyebar",
     alt:"Imagem do Sky Bar",
     maps:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.626615299393!2d-46.66925338502178!3d-23.581850084672794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59e140e844a5%3A0xee8005a359e780e3!2sSkye!5e0!3m2!1sen!2sbr!4v1623330701832!5m2!1sen!2sbr"
@@ -60,7 +64,10 @@ const DOM = {
         <div class="description shadow" >
             <p>${description.description}</p>
             <p>${description.address}</p>
-            <p>${description.take}</p>
+            <p>Preço Médio: ${description.precoMedio}</p>
+            <p>Horario de funcionamento: ${description.horario}</p>
+            <p>Melhor dia para visitação: ${description.melhorDia}</p>
+            <p>Hórarios de maior procura: ${description.maiorProcura}</p>
         </div>
         `
         return html;
