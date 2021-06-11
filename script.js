@@ -242,3 +242,19 @@ const ModalPages ={
     }
 }
 
+//validar login
+
+// LOGIN =======================================
+
+function check() {
+
+    let login = document.getElementById('idEmail').value
+    let senha = document.getElementById('idPassword').value
+
+    if (login == 'teste@teste' && senha == 'teste' ) {
+        
+        location.href='./escolha.html'
+    }else {
+        alert("Error Password or Username")
+    }
+}

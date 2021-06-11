@@ -13,8 +13,6 @@
     <title>Login</title>
 </head>
 
-<body>
-
     <header class="shadow">
         <img id="imgLogo" src="./img/traveller_logo.svg" alt="Logo da Traveller">
         <nav class="navbar">
@@ -27,16 +25,15 @@
     <main>
         <div class="card">
             <h1>SEJA BEM VINDO À TRAVELLER!</h1>
-            <form action="./escolha.html" method="get">
-                <input class="txtLogin" tabindex="1" type="email" placeholder="Digite seu e-mail" name="email" id="idEmail" required>
-                <input class="txtLogin" tabindex="2" type="password" placeholder="Digite sua senha" name="passwd" id="idPassword" required>
-
+            <form method="get">
+                <input tabindex="1" type="email" placeholder="Digite seu e-mail" name="email" id="idEmail" required>
+                <input tabindex="2" type="password" placeholder="Digite sua senha" name="passwd" id="idPassword" required>
                 <div class="clsButtons">
 
                     <a class="btn" href="./cadastro.html">CADASTRAR</a>
 
                     <div class="loginAndForgot">
-                        <input tabindex="3" class="btn" type="submit" value="ENTRAR">
+                        <input tabindex="3" class="btn" type="button" value="Login" onclick="check()">
 
                         <a class="forgot" href="#">ESQUECI MINHA SENHA</a>
                     </div>
@@ -49,6 +46,8 @@
     <footer class="rodape">
         <small>© Copyright 2021 - Traveller</small>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
