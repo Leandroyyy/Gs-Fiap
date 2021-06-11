@@ -27,7 +27,7 @@
 body {
     background-color: var(--purple);
 
-    overflow:hidden;
+    overflow-y: auto;
 }
 
 /* ================================= NavBar ================================= */
@@ -139,7 +139,6 @@ input[type="email"], input[type="password"]{
     border-radius: 1.8rem;
 
     transition-duration: 0.4s;
-    cursor: pointer;
 
     opacity: 1rem;
 }
@@ -191,7 +190,9 @@ input[type="email"]:focus, input[type="password"]:focus{
 .clsButtons{
     display: flex;
     flex-direction: row;
+
     flex-wrap: wrap;
+
     align-items:flex-start;
     justify-content: space-between;
 }
@@ -236,4 +237,44 @@ a.forgot:hover, a.forgot:focus{
 
 .rodape small{
     color:var(--light-light-gray);
+}
+
+/* ==================================== Media Query ===================================== */
+
+@media screen and (max-width: 1000px){
+    form{
+        align-items: center;
+    }
+    .clsButtons{
+        flex-direction: column-reverse;
+        align-items: center;
+    }   
+    .btn{
+        width: 80vw;
+    }
+    .loginAndForgot{
+        flex-direction: column-reverse;
+    }
+    input[type="email"], input[type="password"]{
+        width: 80vw;
+    }
+    .rodape{
+        height: 2rem;
+        position: fixed;
+    }
+}
+
+@media screen and (max-width: 440px){
+    header{
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #imgLogo{
+        margin-bottom: 1rem;
+    }
+
+    main .card{
+        width: 90vw;
+    }
 }
