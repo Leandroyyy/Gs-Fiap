@@ -202,7 +202,6 @@ figcaption.title{
     align-items: center;
     justify-content:center;
 
-    position:absolute;
     bottom:0;
     
     width:100%;
@@ -282,7 +281,7 @@ figcaption.title{
     }
 
     header .navbar a{
-        font-size: 0.7rem;
+        font-size: 0.75rem;
         padding:0.6rem;
 
         white-space: nowrap

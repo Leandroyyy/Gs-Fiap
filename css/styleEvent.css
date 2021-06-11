@@ -89,6 +89,8 @@ li {
     justify-items: center;
     align-content: space-evenly;
     align-items: center;
+
+    
 }
 
 .card {
@@ -168,6 +170,21 @@ li {
 
     font-size: 1.35rem;
 }
+/*================================Sroll================================ */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--aqua);
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--light-blue);
+}
 
 /* ==================================== Footer ===================================== */
 
@@ -176,7 +193,6 @@ li {
     align-items: center;
     justify-content:center;
 
-    bottom:0;
     position:absolute;
     
     width:100%;
@@ -193,6 +209,156 @@ li {
     
     color:var(--light-light-gray);
 }
+
+
+/*==================================Modal================================*/
+
+.modalPlaces{
+    width: 100vw;
+    height:100vh;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    display: flex;
+    justify-content:center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    z-index: 999;
+}
+
+.modalPlaces.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background-color: var(--purple);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 80vw;
+    height:100vh;
+    position: relative;
+    
+    display:flex;
+}
+
+.divImage{
+    margin-top:2rem;
+
+    padding:0 5rem 0 1rem;
+}
+
+.card {
+    background-color: var(--dark-purple);
+    border-radius: 1rem;
+    padding: 1rem;
+    color: var(--light-light-gray)
+}
+
+.place {
+    width: 30rem;
+    height: 30rem;
+    object-fit: cover;
+    border-radius: 0 0 1rem 1rem;
+}
+
+figcaption.title{
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.5rem;
+    width:30rem;
+
+    color: var(--light-light-gray);
+    background-color: var(--dark-purple);
+    border-radius: 1rem 1rem 0 0;
+
+}
+
+.description{
+    color: var(--light-light-gray);
+    background-color: var(--dark-purple);
+    border-radius: 1rem;
+    
+    width:30rem;
+    height: 10rem;
+
+    padding:1rem;
+
+    overflow:scroll
+}
+
+.description p{
+    padding-top:1rem;
+
+}
+
+.description p:first-child{
+    padding:0
+}
+
+.card.rating{
+    margin: 1rem 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.close{
+    top: 1rem;
+    right: 1rem;
+    position:absolute;
+
+}
+
+.close i{
+    font-size:2rem;
+
+    cursor: pointer;
+
+    padding-left:2rem 
+}
+
+/* ================================= Comentarios ================================= */
+
+.comments{
+
+    margin-top:3rem;
+    padding: 1rem;
+    border: 0.3rem solid var(--dark-purple);
+    border-radius: 1rem;
+
+    width:100%;
+    height:50%;
+    
+    overflow-y: scroll;
+}
+
+.name{
+    font-size:1.3rem;
+}
+
+.line{
+    border-bottom: 2px solid var(--light-gray);
+    border-bottom-style: solid;
+    border-bottom-width: 3.1px;
+    width: fit-content;
+}
+
+.map{
+    width:100%;
+    height:40vh;
+
+    padding:1rem;
+
+    border:none;
+}
+
 
 /* ================================= Media Queries ================================= */
 
@@ -211,10 +377,43 @@ li {
     
     .rodape{
         position:fixed;
+
+        bottom:0;
+    }
+
+    .modal{
+        overflow: scroll;
+
+        flex-direction: column;
+        align-items: center;
+
+        width:60vw;
+    }
+
+    .divImage{
+        margin-top:2rem;
+        padding:0
     }
 }
 
-@media(min-width: 481px) and (max-width:768px){
+@media (max-width:900px){
+    figcaption.title{
+        width:25rem
+    }
+
+    .place{
+        width:25rem;
+    }
+
+    .description{
+        width:25rem;
+
+        overflow: scroll
+    }
+}
+
+
+@media (max-width:800px){
     header{
         padding:1rem;
         justify-content:center
@@ -237,47 +436,92 @@ li {
         width: 90vw;
     }  
 
-    .rodape{
-        height:5vh;
-    }
-}
-
-@media(min-width: 341px) and (max-width:480px){
-    body{
-        overflow: scroll;
+    .comments{
+        width:50vw;
     }
 
-    #imgLogo{
-        width:10rem;    
+    .card.rating{
+        width:10vw;
+        overflow:scroll;
+
     }
 
-    header{
-        padding:0.5rem;
-        justify-content:center;
+    /*===================Modal==================*/
+
+    figcaption.title{
+        width:20rem
     }
 
-    header .navbar a{
-        font-size: 0.75rem;
-        padding:0.6rem;
-
-        white-space: nowrap
+    .place{
+        width:20rem
     }
 
-    .container {
-        grid-template-columns: 1fr;
-    }
-
-    .cardImage{
-        width: 7rem;
+    .description{
+        width:20rem
     }
 
     .rodape{
         height:5vh;
     }
-    
 }
 
-@media (max-width:340px){
+
+@media (max-width:650px){
+    figcaption.title{
+        width:15rem;
+
+        font-size:1.5rem
+    }
+
+    .place{
+        width:15rem;
+        height:15rem;
+    }
+
+    .description{
+        width:15rem
+    }
+
+    .comments{
+        width:50vw;
+        height:30vh;
+
+        padding:2rem
+    }
+
+    .card.rating{
+        width:5vw;
+        height:10vh;
+    }
+
+    .name{
+        font-size:1rem
+    }
+
+    .text{
+        font-size:1rem;
+    }
+
+}
+
+@media(max-width:500px){
+    figcaption.title{
+        width:10rem;
+
+        font-size:1.5rem
+    }
+
+    .place{
+        width:10rem
+    }
+
+    .description{
+        width:10rem
+    }
+}
+
+
+@media (max-width:480px){
     body{
         overflow: scroll
     }
@@ -313,6 +557,10 @@ li {
 
     .title h1{
         font-size: 1rem;
+    }
+
+    .card.rating{
+        overflow: scroll
     }
 
     .rating{
