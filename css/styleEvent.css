@@ -160,7 +160,18 @@ li {
     padding: 1rem 0;
 }
 
-.title h1 {
+.headTitle{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.headTitle h2{
+    font-size:0.75rem;
+    color:#F8F8FF
+}
+
+.headTitle h1 {
     font-size: 1.5rem;
 }
 
