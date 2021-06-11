@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styleCadastro.css">
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/icone.ico" />
+    <title>Login</title>
+</head>
+
+<body>
+
+    <header class="shadow">
+        <img id="imgLogo" src="./img/traveller_logo.svg" alt="Logo da Traveller">
+        <nav class="navbar">
+            <ul>
+                <li><a class="" href="#">QUEM SOMOS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="card">
+            <h1>REALIZE SEU CADASTRO!</h1>
+            <form action="./index.html" method="get">
+                <input tabindex="1" type="text" placeholder="Digite seu nome" name="nome" id="idNome">
+
+                <input tabindex="2" type="email" placeholder="Digite seu e-mail" name="email" id="idEmail">
+
+                <div class='column space radio'>
+                    <input type="radio" name="gender" id="male" value="male" checked>
+                    <label tabindex="3" for="male">Masculino</label>
+
+                    <input type="radio" name="gender" id="female" value='female'>
+                    <label tabindex="4" for="female">Feminino</label>
+
+                    <input type="radio" name="gender" id="others" value='others'>
+                    <label tabindex="5" for="others">Outros</label>
+                </div>
+
+                <input tabindex="6" type="text" placeholder="Data de Nascimento" onfocus="(this.type='date')"
+                    name="birth">
+
+                <input tabindex="7" type="password" placeholder="Digite sua senha" name="passwd" id="idPassword">
+
+                <input tabindex="8" class="btn" type="submit" value="CADASTRAR">
+            </form>
+        </div>
+    </main>
+
+
+    <footer class="rodape">
+        <small>© Copyright 2021 - Traveller</small>
+    </footer>
+</body>
+
+</html>
