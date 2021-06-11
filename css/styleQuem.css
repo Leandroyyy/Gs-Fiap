@@ -1,0 +1,212 @@
+/* ================================= Colors ================================= */
+:root {
+    --pink: #ce2178;
+    --purple: #9155F2;
+    --dark-purple: #2E0670;
+    --light-blue: #4895ef;
+    --aqua: #50deff;
+    --light-gray: #acacac;
+    --light-light-gray: #cecece;
+    --dark-gray: #353535;
+    --shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+}
+
+/* ================================= Global ================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    text-decoration: none;
+    outline: none;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--purple);
+
+    overflow-y: auto;
+}
+
+/* ================================= NavBar ================================= */
+
+header {
+    padding: 1rem;
+    background-color: var(--dark-purple);
+
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: space-between;
+
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+
+}
+
+#imgLogo {
+    width: 15rem;
+}
+
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header .navbar a {
+    padding: 1rem;
+
+    font-weight: 700;
+    color: var(--light-light-gray);
+
+    opacity: 0.85;
+}
+
+header .navbar a:hover {
+    opacity: 1;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+li {
+    list-style: none;
+}
+
+header .navbar a.active{
+    color:var(--pink);
+    opacity: 1;
+}
+
+/* ==================================== Main ===================================== */
+
+main{
+    padding: 2.5rem;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.card{
+    width: 14vw;
+    min-width: 10rem;
+    padding: 1.5rem;
+
+    margin: .5rem;
+
+    border-radius: 1rem;
+
+    background-color: var(--dark-purple);
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgAvatar{
+    width: 8rem;
+}
+
+.links{
+    margin: 0.5rem 0 0 0
+}
+
+.card a{
+    color:var(--purple);
+    margin: 0 2rem;
+}
+
+.links a:hover{
+    cursor: pointer;
+    color: var(--pink);
+    opacity: 1;
+}
+
+p{
+    font-size: 1.2rem;
+    color: var(--light-gray)
+}
+
+.nome{
+    color:var(--aqua);
+    font-weight: 700;
+}
+
+.rm{
+    color:var(--pink);
+    font-weight: 500;
+}
+
+
+/* ==================================== Footer ===================================== */
+
+.rodape{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+
+    position: absolute;
+    bottom:0;
+   
+    width:100%;
+
+    background-color: var(--dark-purple);
+
+    height:9vh;
+
+    -webkit-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+}
+
+.rodape small{
+    color:var(--light-light-gray);
+}
+
+/* ==================================== Media Query ===================================== */
+
+@media screen and (max-width: 1800px){
+    .rodape{
+        height: 2rem;
+        position: fixed;
+    }
+}
+
+@media screen and (max-width: 800px){
+    header{
+        flex-direction: column;
+    }
+    #imgLogo{
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 560px){
+    .navbar ul{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 440px){
+    header{
+        justify-content: center;
+        flex-direction: column;
+    }
+    main{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        width: 80vw;
+    }
+}
