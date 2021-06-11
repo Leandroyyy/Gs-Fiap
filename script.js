@@ -242,3 +242,15 @@ const ModalPages ={
     }
 }
 
+//validar login
+
+// LOGIN =======================================
+
+function check(page) {
+
+    if (page.username.value == "teste@teste.com" && page.password.value == "teste") {
+        window.open('escolha.html')
+    }else {
+        alert("Error Password or Username")
+    }
+}
