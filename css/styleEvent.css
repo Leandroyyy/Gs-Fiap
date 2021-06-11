@@ -89,6 +89,8 @@ li {
     justify-items: center;
     align-content: space-evenly;
     align-items: center;
+
+    
 }
 
 .card {
@@ -191,7 +193,6 @@ li {
     align-items: center;
     justify-content:center;
 
-    bottom:0;
     position:absolute;
     
     width:100%;
@@ -218,6 +219,7 @@ li {
 
     position:fixed;
     top:0;
+    left:0;
 
     background-color: rgba(0, 0, 0, 0.7);
 
@@ -375,6 +377,8 @@ figcaption.title{
     
     .rodape{
         position:fixed;
+
+        bottom:0;
     }
 
     .modal{
