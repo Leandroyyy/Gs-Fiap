@@ -246,10 +246,14 @@ const ModalPages ={
 
 // LOGIN =======================================
 
-function check(page) {
+function check() {
 
-    if (page.username.value == "teste@teste.com" && page.password.value == "teste") {
-        location('./escolha.html')
+    let login = document.getElementById('idEmail').value
+    let senha = document.getElementById('idPassword').value
+
+    if (login == 'teste@teste' && senha == 'teste' ) {
+        
+        location.href='./escolha.html'
     }else {
         alert("Error Password or Username")
     }

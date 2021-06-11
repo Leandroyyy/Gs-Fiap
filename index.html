@@ -13,7 +13,7 @@
     <title>Login</title>
 </head>
 
-<>
+
 
     <header class="shadow">
         <img id="imgLogo" src="./img/traveller_logo.svg" alt="Logo da Traveller">
@@ -27,7 +27,7 @@
     <main>
         <div class="card">
             <h1>SEJA BEM VINDO À TRAVELLER!</h1>
-            <form action="./" method="get">
+            <form method="get">
                 <input tabindex="1" type="email" placeholder="Digite seu e-mail" name="email" id="idEmail">
                 <input tabindex="2" type="password" placeholder="Digite sua senha" name="passwd" id="idPassword">
 
@@ -36,7 +36,7 @@
                     <a class="btn" href="./cadastro.html">CADASTRAR</a>
 
                     <div class="loginAndForgot">
-                        <input tabindex="3" class="btn" type="submit" value="ENTRAR" onclick="check(this.form)">
+                        <input tabindex="3" class="btn" type="button" value="Login" onclick="check()">
 
                         <a class="forgot" href="#">ESQUECI MINHA SENHA</a>
                     </div>
