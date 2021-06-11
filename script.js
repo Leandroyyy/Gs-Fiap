@@ -249,7 +249,7 @@ const ModalPages ={
 function check(page) {
 
     if (page.username.value == "teste@teste.com" && page.password.value == "teste") {
-        window.open('escolha.html')
+        location('./escolha.html')
     }else {
         alert("Error Password or Username")
     }
