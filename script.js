@@ -241,11 +241,7 @@ const ModalPages ={
         document.querySelector('body').style.overflow = "scroll"
     }
 }
-
-//validar login
-
-// LOGIN =======================================
-
+// valida login
 function check() {
 
     let login = document.getElementById('idEmail').value
@@ -258,3 +254,4 @@ function check() {
         alert("Error Password or Username")
     }
 }
+
