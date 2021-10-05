@@ -11,3 +11,5 @@
 > - RM86866 - Henrique Akio
 > - RM86721 - Leandro Cavallari
 > - RM87404 - Ricardo Costa 
+> - RM89358 - Erlis Brito 
+> - RM87173 - Leonardo Cézar de Oliveira
